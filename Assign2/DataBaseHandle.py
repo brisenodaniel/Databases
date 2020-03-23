@@ -88,5 +88,6 @@ class StudentDb:
         if results == []: return None
         df = DataFrame(results,columns = ['StudentId','Firstname','LastName', 'GPA', 'Major', 'FacultyAdvisor'])
         return df
-
+    def __del__(self):
+        self.conn.close()
 
