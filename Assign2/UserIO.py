@@ -22,7 +22,7 @@ class IO:
         they wish to take"""
         #Database menu options
         menu = {'1':self.select_all,'2':self.add_student,'3':self.update_student,'4':self.delete_student,'5':self.search,'0':self.close_app}
-        while(not self.user_exit == True): #while the user has not closed the application
+        while not self.user_exit:  #while the user has not closed the application
             print("\n\n")
             #print menu
             selection = input("Please select one of the following:\n\tDisplay all students: 1\n\tAdd a student to the database: 2\n\tUpdate an existing student's information: 3\n\tDelete a student: 4\n\tSearch for students with a given Major, GPA, or Faculty Advisor: 5\n\tExit the application: 0\n").strip()
